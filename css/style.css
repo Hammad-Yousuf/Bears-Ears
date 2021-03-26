@@ -65,7 +65,6 @@ header{
 .main-container{
     width: 21rem;
     height: 60vh;
-    background: #fff;
     position: relative;
     cursor: pointer;
     z-index: 98;
