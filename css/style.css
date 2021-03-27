@@ -69,7 +69,8 @@ header {
     min-width: 21rem;
     min-height: 85%;
     margin: 0 auto;
-    background: transparent;
+    background: none;
+    border: none;
     position: relative;
     cursor: pointer;
     z-index: 98;
