@@ -223,7 +223,6 @@ header{
     }
     #cards{
     overflow: hidden;
-    background: #000;
     }
     .main-container{
         z-index: 998;
