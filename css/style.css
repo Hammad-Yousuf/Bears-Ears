@@ -37,11 +37,7 @@ header{
 .logo{
     width: 30vh;
 }
-@media (max-width: 768px){
-    .logo{
-    margin: 0 auto;
-    }
-}
+
 .main-heading{
     font-size: 1rem;
     color: #fff;
@@ -57,14 +53,16 @@ header{
 
 #cards{
     width: 100%;
-    height: 70vh;
+    min-height: 70vh;
     display: flex;
     justify-content: space-between;
     align-items: top;
 }
 .main-container{
-    width: 21rem;
-    height: 60vh;
+    min-width: 21rem;
+    min-height: 85%;
+    margin: 0 auto;
+    background: transparent;
     position: relative;
     cursor: pointer;
     z-index: 98;
@@ -216,6 +214,30 @@ header{
     }
     .main-container:hover .hidden .content-head::after{
         transform: scale(1);
+    }
+}
+@media (max-width: 768px){
+    header{
+        z-index: 999;
+        justify-content: space-between;
+    }
+    #cards{
+    overflow: hidden;
+    background: #000;
+    }
+    .main-container{
+        z-index: 998;
+        width: 100%;
+    height: 85%;
+    }
+    .main-heading{
+        line-height: 0.5;
+        order: 3;
+        z-index: 999;
+        margin-bottom: -25px;
+    }
+    .logo{
+        width: 20vh;
     }
 }
 #loader{
