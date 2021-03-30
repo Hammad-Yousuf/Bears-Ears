@@ -1,0 +1,51 @@
+.main-modal{
+    opacity: 0;
+    transform: scale(1,0);
+    transform-origin: top;
+    width: 100%;
+    height: 100vh;
+    z-index: 999999;
+    position: absolute;
+    top: 0;
+    display: grid;
+    place-items: center;
+    transition: all 250ms ease-in-out;
+}
+.appear-modal{
+    opacity: 1;
+    transform: scale(1,1);
+    transition: all 250ms ease-in-out;
+}
+._modal{
+    width: 100%;
+    height: 100vh;
+    z-index: 999999;
+    position: absolute;
+    top: 0;
+    display: grid;
+    place-items: center;
+}
+.modal-bg{
+    background: linear-gradient(rgba(0, 0, 0, 0.726),rgba(0, 0, 0, 0.712));
+    backdrop-filter: blur(20px);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -2;
+    top: 0;
+}
+.modal-container{
+    width: 90%;
+    height: 90vh;
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('../Images/background.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.close-icon{
+    font-size: 1.5rem;
+    font-weight: 300;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
