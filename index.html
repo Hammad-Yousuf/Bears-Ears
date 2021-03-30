@@ -14,6 +14,7 @@
     <!-- Favicon -->
     <link rel="shortcut icon" href="./Images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/modal.css">
     <title>This is Bears Ears</title>
 
 </head>
@@ -28,9 +29,9 @@
         </div>
         <div class="navigation-bar navbar-expand-xxl">
             <span class="icon-container">
-                <i class="fab fa-facebook-square socaial-icon"></i>
+                <i class="fab fa-facebook-square social-icon"></i>
                 &nbsp;
-                <i class="fab fa-twitter socaial-icon"></i>
+                <i class="fab fa-twitter social-icon"></i>
             </span>
             <button class="navbar-toggler bg-transparent">
                 <span class="custom-toggler navbar-toggler-icon"></span>
@@ -50,7 +51,7 @@
                 <div class="container">
                     <h1 class="content-head">01</h1>
                     <h1 class="content-title">Culture</h1>
-                    <button class="content-button">Explore</button>
+                    <button class="content-button" id="_first" >Explore</button>
                 </div>
             </div>
         </div>
@@ -65,7 +66,7 @@
                 <div class="container">
                     <h1 class="content-head">02</h1>
                     <h1 class="content-title">Sports</h1>
-                    <button class="content-button">Explore</button>
+                    <button class="content-button" id="_second">Explore</button>
                 </div>
             </div>
         </div>
@@ -80,12 +81,58 @@
                 <div class="container">
                     <h1 class="content-head">03</h1>
                     <h1 class="content-title">Make Action</h1>
-                    <button class="content-button">Defend</button>
+                    <button class="content-button" id="_third">Defend</button>
                 </div>
             </div>
         </div>
         <div id="bg"></div>
     </section>
+
+    <section id="_first-modal" class="main-modal">
+        <div class="_modal">
+            <div class="modal-bg"></div>
+            <div class="close-icon-container container-fluid">
+            <i class="fal fa-times close-icon" id="_close-modal"></i>
+            </div>
+            <div class="container modal-container culture-modal">
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="_second-modal" class="main-modal">
+        <div class="_modal">
+            <div class="modal-bg"></div>
+            <div class="close-icon-container container-fluid">
+            <i class="fal fa-times close-icon" id="_second-close-modal"></i>
+            </div>
+            <div class="container modal-container culture-modal">
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="_third-modal" class="main-modal">
+        <div class="_modal">
+            <div class="modal-bg"></div>
+            <div class="close-icon-container container-fluid">
+            <i class="fal fa-times close-icon" id="_third-close-modal"></i>
+            </div>
+            <div class="container modal-container culture-modal">
+                
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
 
     <section id="loader">
         <div class="container loader-container my-auto">
@@ -105,25 +152,6 @@
             
         </div>
     </section>
-    <div class="video-container" id="video">   
-        <div class="video-content">
-            <div class="video-heading">
-                <h1 class="m-0">This is Bears Ears</h1>
-                <p class=" m-0">National Monument</p>
-            </div>
-            <div class="play-icon-container">
-            <i class="play-icon"></i>
-            </div>
-            <div class="video-text">
-                <p>
-                    Bears Ears is a multimedia experience that has been optimized for sound and VR
-                </p>
-            </div>
-        </div> 
-        <video src="./Bears Ears Looping Intro B.mp4" autoplay muted loop>
-        </video>
-        <div class="btn-container"><button id="skip">Skip</button></div>
-    </div>
     <!-- Optional JavaScript; choose one of the two! -->
     <script src="./Js/script.js"></script>
     <!-- Option 1: Bootstrap Bundle with Popper -->
