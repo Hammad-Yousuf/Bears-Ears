@@ -5,20 +5,69 @@ body {
     background-size: cover;
     min-height: 100vh;
     color: #fff;
-    position: relative;
 }
 
+#mainMenu{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8));
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    transform: rotateX(-90deg);
+    transform-origin: top;
+    transition: transform 250ms ease-in-out;
+    backdrop-filter: blur(10px);
+}
+.mainMenu_CloseIcon_Container{
+    z-index: inherit;
+}
+#mainMenuClose{
+    text-align: right;
+    font-size: 2rem;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    cursor: pointer;
+}
+.chapterTitleContainer{
+    display: flex;
+}
+.title{
+    margin-top: 10px;
+    padding: 0 1rem;
+    font-size: 1rem;
+    color: #bbb;
+    cursor: pointer;
+    transition: color 250ms ease-in-out;
+}
+.title:hover{
+    color: #fff;
+    text-decoration: underline;
+}
+#mainMenuCards{
+    height: 50vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
 #cards {
+    width: 100vw;
+    overflow: hidden;
+    margin-top: 5vh;
+    height: 50vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
 }
 
-#bg {
+#bg{
     width: 100%;
     min-height: 100vh;
-    position: fixed;
+    position: absolute;
     background: transparent;
     top: 0;
     left: 0;
@@ -39,14 +88,11 @@ header {
     justify-items: center;
     align-items: center;
     margin-bottom: 30px;
-    z-index: 99999999;
 }
 
 .logo {
     width: 30vh;
     cursor: pointer;
-    z-index: 99999999;
-
 }
 
 .main-heading {
@@ -54,8 +100,6 @@ header {
     color: #fff;
     text-align: center;
     justify-self: center;
-    z-index: 99999999;
-
 }
 
 .main-heading h1 {
@@ -63,8 +107,6 @@ header {
 }
 .social-icon{
     cursor: pointer;
-    z-index: 99999999;
-
 }
 .fa-facebook-square.social-icon:hover{
     color: rgb(0, 89, 255);
@@ -74,13 +116,11 @@ header {
 }
 .custom-toggler.navbar-toggler-icon {
     background: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255, 255, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-    z-index: 99999999;
-
 }
 
 #cards {
     width: 100%;
-    min-height: 65vh;
+    min-height: 70vh;
     display: flex;
     justify-content: space-between;
     align-items: top;
@@ -88,7 +128,7 @@ header {
 
 .main-container {
     min-width: 21rem;
-    min-height: 85%;
+    min-height: 400px;
     margin: 0 auto;
     background: transparent;
     position: relative;
@@ -132,7 +172,6 @@ header {
     font-size: 5rem;
     transition: opacity 250ms ease-in-out 100ms;
     z-index: 9;
-    z-index: 9;
 }
 
 .content-head::after {
@@ -148,16 +187,6 @@ header {
     transition: opacity 250ms ease-in-out;
 }
 
-.content .content-button{
-    width: 10rem;
-    height: 8vh;
-    background: transparent;
-    color: #fff;
-    font-size: 1.3rem;
-    border: 2px solid #fff !important;
-    position: relative;
-    display: none   ;
-}
 .hidden {
     width: 123%;
     position: absolute;
@@ -168,14 +197,14 @@ header {
 }
 
 .hidden .content-head {
-    font-size: 8rem;
+    font-size: 4rem;
     opacity: 0;
     transition: opacity 250ms ease-in-out;
 }
 
 .hidden .content-head::after {
     content: '';
-    width: 100%;
+    width: 80%;
     height: 2px;
     background: #fff;
     display: block;
@@ -185,7 +214,7 @@ header {
 }
 
 .hidden .content-title {
-    font-size: 4rem;
+    font-size: 3rem;
     opacity: 0;
     transition-delay: 0s;
     transform: scale(0);
@@ -240,8 +269,8 @@ header {
     }
 
     .main-container:hover .hidden {
-        bottom: -5px;
-        left: -25px;
+        bottom: 80px;
+        left: -5px;
     }
 
     .main-container:hover .hidden .content-title {
@@ -279,7 +308,7 @@ header {
     background: #000;
     position: fixed;
     top: 0;
-    z-index: 99999999999;
+    z-index: 99999;
     display: block;
 }
 
@@ -339,7 +368,6 @@ header {
         z-index: 998;
         width: 100%;
         height: 85%;
-        padding-bottom: 1rem;
     }
 
     .main-heading {
@@ -353,9 +381,6 @@ header {
         width: 20vh;
     }
 
-    .content   .content-button{
-        display: block;
-    }
 }
 
 footer{
@@ -386,12 +411,25 @@ footer{
     height: 50%;
     cursor: pointer;
 }
+#footer-bg {
+    width: 100%;
+    min-height: 100vh;
+    position: fixed;
+    background: transparent;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    display: none;
+    transition: background-image 550ms ease-in-out;
+}
 .map-container:hover{
     transform: scale(1.8);
     background-color: rgba(255, 255, 255, 0.527) ;
     z-index: 99999;
 }
-.map-container:hover ~ #bg {
+.map-container:hover ~ #footer-bg {
     display: block;
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)) !important;
 }
