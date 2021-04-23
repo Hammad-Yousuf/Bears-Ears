@@ -57,7 +57,7 @@ body {
     width: 100vw;
     overflow: hidden;
     margin-top: 5vh;
-    height: 50vh;
+    min-height: 50vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
